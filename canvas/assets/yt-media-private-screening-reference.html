@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="kombai-design-canvas" content="true">
+  
+  
+  
+  <script src="https://unpkg.com/@tailwindcss/browser@4.3.3/dist/index.global.js" integrity="sha384-2ql948lIdLcGEE0/qxNiudyTjgauA3RDJERu5xW75kFCvSl5a9odyQYCb6tEjnmB" crossorigin="anonymous"></script>
+  
+  <style>html, body { margin: 0; padding: 0; } #root { display: contents; }</style>
+</head><body>
+  <div id="root"><style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/lucide-static@1.48.0/font/lucide.css');
+.screening { --obsidian:oklch(from #040407 l c h); --ivory:oklch(96.2% 0.012 95); --gold:oklch(from #d4af37 l c h); --crimson:oklch(from #ff0033 l c h); --indigo:oklch(from #4f46e5 l c h); --cyan:oklch(from #06b6d4 l c h); font-family:'Raleway',sans-serif; background:var(--obsidian); color:var(--ivory); }
+.screening .display { font-family:'Cormorant',serif; }
+.screening .glass { background:linear-gradient(120deg,rgba(255,255,255,.065),rgba(255,255,255,.025)); backdrop-filter:blur(30px) saturate(200%); border:1px solid rgba(245,243,234,.14); box-shadow:inset 0 1px 1px rgba(255,255,255,.2); }
+.screening .aperture { border-radius:34px 34px 48px 48px / 34px 34px 25px 25px; border:1px solid rgba(245,230,185,.32); box-shadow:inset 0 1px 1px #ffffff40; }
+.screening .active-nav { background:linear-gradient(110deg,#d4af3724,#d4af3708); border:1px solid #d4af3730; box-shadow:inset 0 1px 1px #fff1; color:#e5cc83; }
+.screening .vinyl { background:repeating-radial-gradient(circle at center,#151517 0px,#151517 1px,#29292b 1.5px,#0c0c0e 2.5px,#161618 3px); box-shadow:inset 0 0 0 1px #ffffff24,3px 6px 18px #04040780; }
+.screening button { cursor:default; }
+.screening button:focus-visible, .screening input:focus-visible { outline:2px solid var(--gold); outline-offset:4px; }
+.screening input[type=range] { accent-color:#dcc577; height:3px; }
+.screening .photo-surface { background:rgba(255,255,255,.04); border:1px solid #ffffff1a; box-shadow:inset 0 1px 1px #ffffff40; backdrop-filter:blur(30px) saturate(200%); }
+</style>
+<div class="screening relative isolate min-w-[1100px] overflow-x-clip px-7 pt-6 pb-7 text-[14px] font-medium" data-kid="1" data-name="app root layout container" data-node-id="var_b231da24bee8">
+<div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" data-kid="1-1" data-name="decorative background glow layer">
+<div class="absolute -left-48 top-0 h-[700px] w-[650px] rounded-full bg-[#d4af37]/9 blur-[130px]" data-kid="1-1-1" data-name="decorative gold ambient glow orb"></div>
+<div class="absolute right-0 top-24 h-[540px] w-[650px] rounded-full bg-[#ff0033]/10 blur-[125px]" data-kid="1-1-2" data-name="decorative crimson ambient glow orb"></div>
+<div class="absolute -right-64 top-[650px] h-[700px] w-[560px] rounded-full bg-[#06b6d4]/7 blur-[130px]" data-kid="1-1-3" data-name="decorative cyan ambient glow orb"></div>
+<div class="absolute bottom-0 left-[240px] h-[500px] w-[900px] rounded-full bg-[#4f46e5]/10 blur-[145px]" data-kid="1-1-4" data-name="decorative indigo ambient glow orb"></div>
+</div>
+<header class="glass relative z-10 flex h-[88px] items-center gap-7 rounded-[28px] px-5" data-kid="1-2" data-name="top app header bar">
+<div aria-label="YT Media • Powered by Vorex Agency | Built by Dhiraj Kondalwar" class="flex w-[360px] shrink-0 items-center gap-3.5" data-kid="1-2-1" data-name="brand identity block">
+<div aria-hidden="true" class="glass flex size-[49px] shrink-0 items-center justify-center rounded-full text-[21px] text-[#e6ce8c]" data-kid="1-2-1-1" data-name="brand play icon avatar"><i class="icon-play ml-0.5" data-kid="1-2-1-1-1" data-name="brand play icon"></i></div>
+<div class="leading-[1.4]" data-kid="1-2-1-2" data-name="brand title and attribution text"><span class="block text-[20px] font-semibold tracking-[-.5px]" data-kid="1-2-1-2-1" data-name="brand name label">YT Media <span class="text-[14px] text-[#d6bf7c]" data-kid="1-2-1-2-1-1" data-name="brand name separator dot">•</span> </span><span class="mt-0.5 block text-[13px] font-medium text-[#e2dfd6]" data-kid="1-2-1-2-2" data-name="brand agency attribution line">Powered by Vorex Agency |<br data-kid="1-2-1-2-2-1" data-name="attribution line break"/> Built by Dhiraj Kondalwar</span></div>
+</div>
+<div class="relative min-w-0 flex-1" data-kid="1-2-2" data-name="search field wrapper">
+<label class="sr-only" data-kid="1-2-2-1" data-name="search field accessible label" for="media-search">Search your collection</label>
+<span class="pointer-events-none absolute left-4 top-3.5 text-[19px] text-[#c8c6c1]" data-kid="1-2-2-2" data-name="search field icon wrapper"><i class="icon-search" data-kid="1-2-2-2-1" data-name="search magnifier icon"></i></span>
+<input class="h-12 w-full rounded-[18px] border border-white/10 bg-[#050508]/35 pr-4 pl-12 text-[14px] text-[#f5f3ea] placeholder:text-[#bcbab6] outline-hidden" data-kid="1-2-2-3" data-name="media search input field" id="media-search" placeholder="Search your collection" type="search"/>
+</div>
+<div class="flex shrink-0 items-center gap-5" data-kid="1-2-3" data-name="header right action group">
+<button class="flex items-center gap-2 text-[14px] text-[#e3e0d8]" data-kid="1-2-3-1" data-name="admin studio action button" type="button"><span class="text-[18px]" data-kid="1-2-3-1-1" data-name="slider icon holder"><i class="icon-sliders-horizontal" data-kid="1-2-3-1-1-1" data-name="slider settings icon"></i></span>Admin Studio</button>
+<span class="h-6 w-px bg-white/12" data-kid="1-2-3-2" data-name="header vertical divider"></span>
+<button class="flex h-12 items-center gap-2.5 rounded-[17px] border border-[#dfc67d]/25 bg-[#d4af37]/5 px-4 text-[14px] text-[#e8d8a7]" data-kid="1-2-3-3" data-name="lock vault action button" type="button"><span class="text-[18px]" data-kid="1-2-3-3-1" data-name="lock icon holder"><i class="icon-lock-keyhole" data-kid="1-2-3-3-1-1" data-name="lock keyhole icon"></i></span>Lock Vault</button>
+</div>
+</header>
+<div class="relative mt-6 grid grid-cols-[196px_minmax(0,1fr)] items-start gap-6" data-kid="1-3" data-name="main app body grid">
+<aside class="glass relative overflow-hidden rounded-[30px_30px_42px_42px] px-3 py-5" data-kid="1-3-1" data-name="side navigation panel">
+<div aria-hidden="true" class="absolute -left-10 top-20 h-48 w-16 rounded-full bg-[#d4af37]/10 blur-3xl" data-kid="1-3-1-1" data-name="decorative sidebar glow accent"></div>
+<div class="mb-6 flex items-center justify-between px-3 text-[#d1cdc3]" data-kid="1-3-1-2" data-name="sidebar header row"><span class="text-[14px]" data-kid="1-3-1-2-1" data-name="sidebar collection label">Your collection</span><button aria-label="Collapse sidebar" class="text-[18px]" data-kid="1-3-1-2-2" data-name="collapse sidebar button" type="button"><i class="icon-panel-left-close" data-kid="1-3-1-2-2-1" data-name="panel close chevron icon"></i></button></div>
+<nav aria-label="Media collection" class="relative flex flex-col gap-2" data-kid="1-3-1-3" data-name="collection navigation menu">
+<button aria-current="page" class="active-nav flex h-[54px] items-center gap-3.5 rounded-[18px] px-4 text-left text-[15px] font-semibold" data-kid="1-3-1-3-1" data-name="home nav item (active)" type="button"><span class="text-[21px]" data-kid="1-3-1-3-1-1" data-name="home nav icon holder"><i class="icon-house" data-kid="1-3-1-3-1-1-1" data-name="home icon"></i></span>Home</button>
+<button class="flex h-[54px] items-center gap-3.5 rounded-[18px] px-4 text-left text-[15px] text-[#d8d5cc]" data-kid="1-3-1-3-2" data-name="videos nav item" type="button"><span class="text-[21px]" data-kid="1-3-1-3-2-1" data-name="videos nav icon holder"><i class="icon-clapperboard" data-kid="1-3-1-3-2-1-1" data-name="clapperboard icon"></i></span>Videos</button>
+<button class="flex h-[54px] items-center gap-3.5 rounded-[18px] px-4 text-left text-[15px] text-[#d8d5cc]" data-kid="1-3-1-3-3" data-name="shorts nav item" type="button"><span class="text-[21px]" data-kid="1-3-1-3-3-1" data-name="shorts nav icon holder"><i class="icon-smartphone" data-kid="1-3-1-3-3-1-1" data-name="smartphone icon"></i></span>Shorts</button>
+<button class="flex h-[54px] items-center gap-3.5 rounded-[18px] px-4 text-left text-[15px] text-[#d8d5cc]" data-kid="1-3-1-3-4" data-name="posts nav item" type="button"><span class="text-[21px]" data-kid="1-3-1-3-4-1" data-name="posts nav icon holder"><i class="icon-images" data-kid="1-3-1-3-4-1-1" data-name="images grid icon"></i></span>Post</button>
+<button class="flex h-[54px] items-center gap-3.5 rounded-[18px] px-4 text-left text-[15px] text-[#d8d5cc]" data-kid="1-3-1-3-5" data-name="music nav item" type="button"><span class="text-[21px]" data-kid="1-3-1-3-5-1" data-name="music nav icon holder"><i class="icon-disc-3" data-kid="1-3-1-3-5-1-1" data-name="vinyl disc icon"></i></span>Music</button>
+</nav>
+<div class="mx-3 mt-16 border-t border-white/10 pt-5 pb-2" data-kid="1-3-1-4" data-name="sidebar private screening promo">
+<div class="mb-2 flex flex-col items-start gap-2 text-[18px] text-[#d6bd78]" data-kid="1-3-1-4-1" data-name="sidebar promo heading"><i class="icon-armchair" data-kid="1-3-1-4-1-1" data-name="armchair icon"></i><span class="display text-[21px]" data-kid="1-3-1-4-1-2" data-name="sidebar promo title text">Private screening</span></div>
+<p class="text-[13px] leading-6 text-[#bbb7ad]" data-kid="1-3-1-4-2" data-name="sidebar promo tagline text">A little distance<br data-kid="1-3-1-4-2-1" data-name="tagline line break"/>from everything else.</p>
+</div>
+</aside>
+<main aria-label="Home sanctuary" class="min-w-0" data-kid="1-3-2" data-name="main content area">
+<section aria-labelledby="featured-title" class="aperture relative isolate h-[490px] overflow-hidden bg-[#181d20]" data-kid="1-3-2-1" data-name="featured film hero section">
+<img alt="Silver surf following a volcanic coastline at dusk — Lorenzo Alessio Messina on Pexels" class="absolute inset-0 -z-20 size-full object-cover object-[center_57%]" data-kid="1-3-2-1-1" data-name="featured hero background image" decoding="async" loading="lazy" src="https://images.pexels.com/photos/33010644/pexels-photo-33010644.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800&amp;h=850&amp;fit=crop&amp;q=85"/>
+<div aria-hidden="true" class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(4,7,9,.84)_0%,rgba(4,7,9,.42)_44%,rgba(4,7,9,.03)_75%),linear-gradient(0deg,rgba(4,7,9,.9),transparent_75%)]" data-kid="1-3-2-1-2" data-name="featured hero gradient overlay"></div>
+<div aria-hidden="true" class="absolute inset-x-10 top-0 h-px bg-[linear-gradient(90deg,transparent,#f5e8b2aa,#d4af3722,#06b6d440,transparent)]" data-kid="1-3-2-1-3" data-name="featured hero top accent line"></div>
+<div class="absolute bottom-10 left-11 max-w-[600px]" data-kid="1-3-2-1-4" data-name="featured hero text block">
+<h1 class="display text-[76px] font-medium leading-[.9] tracking-[-1.5px] text-[#fbf8ee]" data-kid="1-3-2-1-4-1" data-name="featured hero headline" id="featured-title">Where the<br data-kid="1-3-2-1-4-1-1" data-name="headline line break"/>land ends</h1>
+<p class="mt-5 flex items-center gap-3 text-[13px] text-[#e3d5b1]" data-kid="1-3-2-1-4-2" data-name="featured meta row"><span data-kid="1-3-2-1-4-2-1" data-name="featured genre label">Coastal film</span><span aria-hidden="true" class="size-[3px] rounded-full bg-[#c9b98e]" data-kid="1-3-2-1-4-2-2" data-name="meta separator dot"></span><span data-kid="1-3-2-1-4-2-3" data-name="featured duration label">12 min</span><span aria-hidden="true" class="size-[3px] rounded-full bg-[#c9b98e]" data-kid="1-3-2-1-4-2-4" data-name="meta separator dot"></span><span data-kid="1-3-2-1-4-2-5" data-name="featured quality label">4K</span></p>
+<p class="mt-3 text-[15px] leading-6 text-[#e0dfda]" data-kid="1-3-2-1-4-3" data-name="featured hero tagline">Black sand, silver water. A moment at the edge of Iceland.</p>
+<button class="mt-6 flex h-[50px] items-center gap-3 rounded-full bg-[#e4cf91] px-6 text-[14px] font-bold text-[#211d12]" data-kid="1-3-2-1-4-4" data-name="primary play featured button" type="button"><span class="text-[17px]" data-kid="1-3-2-1-4-4-1" data-name="play button icon holder"><i class="icon-play" data-kid="1-3-2-1-4-4-1-1" data-name="play triangle icon"></i></span>Play Featured</button>
+</div>
+<div class="absolute right-8 bottom-10 flex items-center gap-2 text-[13px] text-[#e5e2d8]" data-kid="1-3-2-1-5" data-name="featured film annotation"><span class="text-[17px]" data-kid="1-3-2-1-5-1" data-name="annotation icon holder"><i class="icon-clapperboard" data-kid="1-3-2-1-5-1-1" data-name="clapperboard icon"></i></span>Featured film</div>
+</section>
+<div class="mt-9 grid grid-cols-[minmax(0,1fr)_330px] gap-8" data-kid="1-3-2-2" data-name="media grid upper row">
+<section aria-labelledby="trending-title" class="min-w-0" data-kid="1-3-2-2-1" data-name="trending videos section">
+<div class="mb-4 flex items-center justify-between gap-4" data-kid="1-3-2-2-1-1" data-name="trending section header"><h2 class="text-[21px] font-semibold tracking-[-.4px]" data-kid="1-3-2-2-1-1-1" data-name="trending section title" id="trending-title">Trending Videos</h2><button aria-label="View all videos" class="flex items-center gap-2 text-[13px] text-[#c8c3b7]" data-kid="1-3-2-2-1-1-2" data-name="view all videos link" type="button">All videos<span class="text-[16px]" data-kid="1-3-2-2-1-1-2-1" data-name="arrow icon holder"><i class="icon-arrow-up-right" data-kid="1-3-2-2-1-1-2-1-1" data-name="arrow up-right icon"></i></span></button></div>
+<div class="grid grid-cols-2 gap-5" data-kid="1-3-2-2-1-2" data-name="trending videos grid">
+<article class="min-w-0" data-kid="1-3-2-2-1-2-1" data-name="video card article">
+<div class="photo-surface relative aspect-video overflow-hidden rounded-[20px]" data-kid="1-3-2-2-1-2-1-1" data-name="video thumbnail container">
+<img alt="Volcanic black-sand beach and white surf — Jan Canty on Unsplash" class="size-full object-cover" data-kid="1-3-2-2-1-2-1-1-1" data-name="video thumbnail image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1790283124162-338b2f8e9171?auto=format&amp;fit=crop&amp;w=720&amp;h=405&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#040407]/65 via-transparent to-transparent" data-kid="1-3-2-2-1-2-1-1-2" data-name="video thumbnail gradient overlay"></div>
+<span class="absolute bottom-3 left-3.5 text-[12px] text-white" data-kid="1-3-2-2-1-2-1-1-3" data-name="video source platform label">YouTube</span><span class="absolute right-3 bottom-3 rounded-md bg-[#040407]/65 px-2 py-1 text-[12px] text-white" data-kid="1-3-2-2-1-2-1-1-4" data-name="video duration badge">12:08</span>
+<button aria-label="Play Where the land ends" class="glass absolute top-1/2 left-1/2 flex size-11 -translate-1/2 items-center justify-center rounded-full text-[19px]" data-kid="1-3-2-2-1-2-1-1-5" data-name="video play overlay button" type="button"><i class="icon-play ml-0.5" data-kid="1-3-2-2-1-2-1-1-5-1" data-name="play triangle icon"></i></button>
+</div>
+<h3 class="mt-3 text-[17px] font-semibold" data-kid="1-3-2-2-1-2-1-2" data-name="video card title">Where the land ends</h3><p class="mt-1.5 text-[13px] leading-5 text-[#bfbcb4]" data-kid="1-3-2-2-1-2-1-3" data-name="video card description">A quiet study of the Icelandic coast</p>
+</article>
+<article class="min-w-0" data-kid="1-3-2-2-1-2-2" data-name="video card article">
+<div class="photo-surface relative aspect-video overflow-hidden rounded-[20px]" data-kid="1-3-2-2-1-2-2-1" data-name="video thumbnail container">
+<img alt="Warm light on sculptural concrete stairs — Declan Sun on Unsplash" class="size-full object-cover" data-kid="1-3-2-2-1-2-2-1-1" data-name="video thumbnail image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1741524915320-8fee76e41424?auto=format&amp;fit=crop&amp;w=720&amp;h=405&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#040407]/65 via-transparent to-transparent" data-kid="1-3-2-2-1-2-2-1-2" data-name="video thumbnail gradient overlay"></div>
+<span class="absolute bottom-3 left-3.5 text-[12px] text-white" data-kid="1-3-2-2-1-2-2-1-3" data-name="video source platform label">Drive Cloud</span><span class="absolute right-3 bottom-3 rounded-md bg-[#040407]/65 px-2 py-1 text-[12px] text-white" data-kid="1-3-2-2-1-2-2-1-4" data-name="video duration badge">08:46</span>
+<button aria-label="Play The shape of silence" class="glass absolute top-1/2 left-1/2 flex size-11 -translate-1/2 items-center justify-center rounded-full text-[19px]" data-kid="1-3-2-2-1-2-2-1-5" data-name="video play overlay button" type="button"><i class="icon-play ml-0.5" data-kid="1-3-2-2-1-2-2-1-5-1" data-name="play triangle icon"></i></button>
+</div>
+<h3 class="mt-3 text-[17px] font-semibold" data-kid="1-3-2-2-1-2-2-2" data-name="video card title">The shape of silence</h3><p class="mt-1.5 text-[13px] leading-5 text-[#bfbcb4]" data-kid="1-3-2-2-1-2-2-3" data-name="video card description">Architecture, shadow and passing light</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="music-title" class="min-w-0" data-kid="1-3-2-2-2" data-name="quick-play music section">
+<div class="mb-5 flex items-center justify-between gap-2" data-kid="1-3-2-2-2-1" data-name="music section header"><h2 class="text-[20px] font-semibold tracking-[-.6px]" data-kid="1-3-2-2-2-1-1" data-name="music section title" id="music-title">Quick-Play Music Tracks</h2><button aria-label="View all music" class="text-[18px] text-[#c8c3b7]" data-kid="1-3-2-2-2-1-2" data-name="view all music link" type="button"><i class="icon-arrow-up-right" data-kid="1-3-2-2-2-1-2-1" data-name="arrow up-right icon"></i></button></div>
+<div class="space-y-4" data-kid="1-3-2-2-2-2" data-name="music tracks list">
+<article class="flex items-center gap-3.5" data-kid="1-3-2-2-2-2-1" data-name="music track row">
+<div class="photo-surface size-[64px] shrink-0 overflow-hidden rounded-[13px]" data-kid="1-3-2-2-2-2-1-1" data-name="track album art container"><img alt="Illuminated amber glass — 金西 卢 on Unsplash" class="size-full object-cover" data-kid="1-3-2-2-2-2-1-1-1" data-name="track album art image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1683799286400-69220fa89f48?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=80"/></div>
+<div class="min-w-0 flex-1" data-kid="1-3-2-2-2-2-1-2" data-name="track info block"><h3 class="text-[16px] font-semibold text-[#e6cf8c]" data-kid="1-3-2-2-2-2-1-2-1" data-name="track title">Afterglow</h3><p class="mt-1.5 text-[13px] text-[#c0bbb0]" data-kid="1-3-2-2-2-2-1-2-2" data-name="track genre and duration">Ambient · 4:32</p></div>
+<button aria-label="Play Afterglow" class="flex size-9 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/30 text-[17px] text-[#e6cf8c]" data-kid="1-3-2-2-2-2-1-3" data-name="track play button" type="button"><i class="icon-play" data-kid="1-3-2-2-2-2-1-3-1" data-name="play triangle icon"></i></button>
+</article>
+<article class="flex items-center gap-3.5" data-kid="1-3-2-2-2-2-2" data-name="music track row">
+<div class="photo-surface size-[64px] shrink-0 overflow-hidden rounded-[13px]" data-kid="1-3-2-2-2-2-2-1" data-name="track album art container"><img alt="Dark Atlantic water — Lorenzo Alessio Messina on Pexels" class="size-full object-cover object-right" data-kid="1-3-2-2-2-2-2-1-1" data-name="track album art image" decoding="async" loading="lazy" src="https://images.pexels.com/photos/33010644/pexels-photo-33010644.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=180&amp;h=180&amp;fit=crop&amp;q=80"/></div>
+<div class="min-w-0 flex-1" data-kid="1-3-2-2-2-2-2-2" data-name="track info block"><h3 class="text-[16px] font-semibold" data-kid="1-3-2-2-2-2-2-2-1" data-name="track title">Low tide</h3><p class="mt-1.5 text-[13px] text-[#c0bbb0]" data-kid="1-3-2-2-2-2-2-2-2" data-name="track genre and duration">Piano · 3:56</p></div>
+<button aria-label="Play Low tide" class="flex size-9 shrink-0 items-center justify-center text-[17px] text-[#dfdbd0]" data-kid="1-3-2-2-2-2-2-3" data-name="track play button" type="button"><i class="icon-play" data-kid="1-3-2-2-2-2-2-3-1" data-name="play triangle icon"></i></button>
+</article>
+<article class="flex items-center gap-3.5" data-kid="1-3-2-2-2-2-3" data-name="music track row">
+<div class="photo-surface size-[64px] shrink-0 overflow-hidden rounded-[13px]" data-kid="1-3-2-2-2-2-3-1" data-name="track album art container"><img alt="Amber light against concrete — Alexander Kaufmann on Unsplash" class="size-full object-cover" data-kid="1-3-2-2-2-2-3-1-1" data-name="track album art image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1784034292954-e988c2e1ce15?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=80"/></div>
+<div class="min-w-0 flex-1" data-kid="1-3-2-2-2-2-3-2" data-name="track info block"><h3 class="text-[16px] font-semibold" data-kid="1-3-2-2-2-2-3-2-1" data-name="track title">Rooms of light</h3><p class="mt-1.5 text-[13px] text-[#c0bbb0]" data-kid="1-3-2-2-2-2-3-2-2" data-name="track genre and duration">Electronic · 5:18</p></div>
+<button aria-label="Play Rooms of light" class="flex size-9 shrink-0 items-center justify-center text-[17px] text-[#dfdbd0]" data-kid="1-3-2-2-2-2-3-3" data-name="track play button" type="button"><i class="icon-play" data-kid="1-3-2-2-2-2-3-3-1" data-name="play triangle icon"></i></button>
+</article>
+</div>
+</section>
+</div>
+<div class="mt-10 grid grid-cols-[1.35fr_1fr] gap-8" data-kid="1-3-2-3" data-name="media grid lower row">
+<section aria-labelledby="shorts-title" class="min-w-0" data-kid="1-3-2-3-1" data-name="latest shorts section">
+<div class="mb-4 flex items-center justify-between" data-kid="1-3-2-3-1-1" data-name="shorts section header"><h2 class="text-[21px] font-semibold tracking-[-.4px]" data-kid="1-3-2-3-1-1-1" data-name="shorts section title" id="shorts-title">Latest Shorts Preview</h2><button aria-label="View all Shorts" class="text-[18px] text-[#c8c3b7]" data-kid="1-3-2-3-1-1-2" data-name="view all shorts link" type="button"><i class="icon-arrow-up-right" data-kid="1-3-2-3-1-1-2-1" data-name="arrow up-right icon"></i></button></div>
+<div class="grid grid-cols-3 gap-4" data-kid="1-3-2-3-1-2" data-name="shorts grid">
+<article class="photo-surface relative aspect-[9/16] overflow-hidden rounded-[21px]" data-kid="1-3-2-3-1-2-1" data-name="short card article">
+<img alt="Concrete passage lit by a red-orange sunset — Alexander Kaufmann on Unsplash" class="size-full object-cover" data-kid="1-3-2-3-1-2-1-1" data-name="short thumbnail image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1784034292954-e988c2e1ce15?auto=format&amp;fit=crop&amp;w=420&amp;h=747&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#080609] via-transparent to-[#040407]/15" data-kid="1-3-2-3-1-2-1-2" data-name="short thumbnail gradient overlay"></div>
+<button aria-label="Play Into the red" class="glass absolute top-3 right-3 flex size-9 items-center justify-center rounded-full text-[16px]" data-kid="1-3-2-3-1-2-1-3" data-name="short play overlay button" type="button"><i class="icon-play" data-kid="1-3-2-3-1-2-1-3-1" data-name="play triangle icon"></i></button>
+<div class="absolute inset-x-4 bottom-4" data-kid="1-3-2-3-1-2-1-4" data-name="short caption block"><h3 class="text-[16px] font-semibold leading-5" data-kid="1-3-2-3-1-2-1-4-1" data-name="short title">Into the red</h3><p class="mt-2 text-[12px] text-[#e0d6c9]" data-kid="1-3-2-3-1-2-1-4-2" data-name="short genre and duration">Architecture · 0:34</p></div>
+</article>
+<article class="photo-surface relative aspect-[9/16] overflow-hidden rounded-[21px]" data-kid="1-3-2-3-1-2-2" data-name="short card article">
+<img alt="A narrow concrete passage opening to the evening sky — Philipp Düsel on Unsplash" class="size-full object-cover" data-kid="1-3-2-3-1-2-2-1" data-name="short thumbnail image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1779020847308-50d6ddd1a544?auto=format&amp;fit=crop&amp;w=420&amp;h=747&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#080609] via-transparent to-[#040407]/15" data-kid="1-3-2-3-1-2-2-2" data-name="short thumbnail gradient overlay"></div>
+<button aria-label="Play Between walls" class="glass absolute top-3 right-3 flex size-9 items-center justify-center rounded-full text-[16px]" data-kid="1-3-2-3-1-2-2-3" data-name="short play overlay button" type="button"><i class="icon-play" data-kid="1-3-2-3-1-2-2-3-1" data-name="play triangle icon"></i></button>
+<div class="absolute inset-x-4 bottom-4" data-kid="1-3-2-3-1-2-2-4" data-name="short caption block"><h3 class="text-[16px] font-semibold leading-5" data-kid="1-3-2-3-1-2-2-4-1" data-name="short title">Between walls</h3><p class="mt-2 text-[12px] text-[#e0d6c9]" data-kid="1-3-2-3-1-2-2-4-2" data-name="short genre and duration">Architecture · 0:42</p></div>
+</article>
+<article class="photo-surface relative aspect-[9/16] overflow-hidden rounded-[21px]" data-kid="1-3-2-3-1-2-3" data-name="short card article">
+<img alt="Sunlight tracing a curved concrete staircase — Aleksandr Zaitsev on Unsplash" class="size-full object-cover" data-kid="1-3-2-3-1-2-3-1" data-name="short thumbnail image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1743760676341-ac13322116ad?auto=format&amp;fit=crop&amp;w=420&amp;h=747&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#080609] via-transparent to-[#040407]/15" data-kid="1-3-2-3-1-2-3-2" data-name="short thumbnail gradient overlay"></div>
+<button aria-label="Play A slower ascent" class="glass absolute top-3 right-3 flex size-9 items-center justify-center rounded-full text-[16px]" data-kid="1-3-2-3-1-2-3-3" data-name="short play overlay button" type="button"><i class="icon-play" data-kid="1-3-2-3-1-2-3-3-1" data-name="play triangle icon"></i></button>
+<div class="absolute inset-x-4 bottom-4" data-kid="1-3-2-3-1-2-3-4" data-name="short caption block"><h3 class="text-[16px] font-semibold leading-5" data-kid="1-3-2-3-1-2-3-4-1" data-name="short title">A slower ascent</h3><p class="mt-2 text-[12px] text-[#e0d6c9]" data-kid="1-3-2-3-1-2-3-4-2" data-name="short genre and duration">Architecture · 0:28</p></div>
+</article>
+</div>
+</section>
+<section aria-labelledby="posts-title" class="min-w-0" data-kid="1-3-2-3-2" data-name="featured posts section">
+<div class="mb-4 flex items-center justify-between" data-kid="1-3-2-3-2-1" data-name="posts section header"><h2 class="text-[21px] font-semibold tracking-[-.4px]" data-kid="1-3-2-3-2-1-1" data-name="posts section title" id="posts-title">Featured Posts</h2><button aria-label="View all posts" class="text-[18px] text-[#c8c3b7]" data-kid="1-3-2-3-2-1-2" data-name="view all posts link" type="button"><i class="icon-arrow-up-right" data-kid="1-3-2-3-2-1-2-1" data-name="arrow up-right icon"></i></button></div>
+<div class="grid grid-cols-2 gap-4" data-kid="1-3-2-3-2-2" data-name="posts grid">
+<article class="min-w-0" data-kid="1-3-2-3-2-2-1" data-name="post card article">
+<div class="photo-surface relative aspect-[4/5] overflow-hidden rounded-[21px]" data-kid="1-3-2-3-2-2-1-1" data-name="post image container">
+<img alt="A photographic study of black sand and sea — Jan Canty on Unsplash" class="size-full object-cover object-[65%_center]" data-kid="1-3-2-3-2-2-1-1-1" data-name="post image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1790283124162-338b2f8e9171?auto=format&amp;fit=crop&amp;w=480&amp;h=600&amp;q=80"/>
+<button aria-label="Like Notes from the coast" class="glass absolute right-3 bottom-3 flex size-9 items-center justify-center rounded-full text-[17px]" data-kid="1-3-2-3-2-2-1-1-2" data-name="post like button" type="button"><i class="icon-heart" data-kid="1-3-2-3-2-2-1-1-2-1" data-name="heart icon"></i></button>
+</div>
+<h3 class="mt-3 text-[16px] font-semibold leading-6" data-kid="1-3-2-3-2-2-1-2" data-name="post title">Notes from the coast</h3><p class="mt-1.5 text-[13px] leading-[1.65] text-[#c6c0b6]" data-kid="1-3-2-3-2-2-1-3" data-name="post description">The tide leaves a different line every time.</p><p class="mt-3 text-[12px] text-[#a9a49d]" data-kid="1-3-2-3-2-2-1-4" data-name="post date and type label">24 October · Photo essay</p>
+</article>
+<article class="min-w-0" data-kid="1-3-2-3-2-2-2" data-name="post card article">
+<div class="photo-surface relative aspect-[4/5] overflow-hidden rounded-[21px]" data-kid="1-3-2-3-2-2-2-1" data-name="post image container">
+<img alt="Amber architectural glass catching the light — 金西 卢 on Unsplash" class="size-full object-cover" data-kid="1-3-2-3-2-2-2-1-1" data-name="post image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1683799286400-69220fa89f48?auto=format&amp;fit=crop&amp;w=480&amp;h=600&amp;q=80"/>
+<button aria-label="Like Light held in glass" class="glass absolute right-3 bottom-3 flex size-9 items-center justify-center rounded-full text-[17px]" data-kid="1-3-2-3-2-2-2-1-2" data-name="post like button" type="button"><i class="icon-heart" data-kid="1-3-2-3-2-2-2-1-2-1" data-name="heart icon"></i></button>
+</div>
+<h3 class="mt-3 text-[16px] font-semibold leading-6" data-kid="1-3-2-3-2-2-2-2" data-name="post title">Light held in glass</h3><p class="mt-1.5 text-[13px] leading-[1.65] text-[#c6c0b6]" data-kid="1-3-2-3-2-2-2-3" data-name="post description">The colours behind the sound of Afterglow.</p><p class="mt-3 text-[12px] text-[#a9a49d]" data-kid="1-3-2-3-2-2-2-4" data-name="post date and type label">22 October · Studio notes</p>
+</article>
+</div>
+</section>
+</div>
+<footer class="mt-9 flex items-center justify-between gap-4 border-t border-white/10 pt-6 pb-8 text-[13px] text-[#cec7b8]" data-kid="1-3-2-4" data-name="footer bar">
+<p data-kid="1-3-2-4-1" data-name="footer copyright text">YT Media • Powered by Vorex Agency | Built by Dhiraj Kondalwar</p>
+<span class="flex items-center gap-2 text-[#b4ae9f]" data-kid="1-3-2-4-2" data-name="footer tagline block"><span class="text-[15px]" data-kid="1-3-2-4-2-1" data-name="headphone icon holder"><i class="icon-headphones" data-kid="1-3-2-4-2-1-1" data-name="headphones icon"></i></span>Make yourself at home.</span>
+</footer>
+<section aria-label="Persistent music player — Afterglow, paused" class="glass relative flex min-h-[124px] items-center gap-5 rounded-full px-6 py-4" data-kid="1-3-2-5" data-name="persistent music player bar">
+<div aria-hidden="true" class="pointer-events-none absolute inset-x-20 top-0 h-px bg-[linear-gradient(90deg,transparent,#d4af3770,#06b6d440,transparent)]" data-kid="1-3-2-5-1" data-name="player top accent line"></div>
+<div class="flex w-[265px] shrink-0 items-center gap-4" data-kid="1-3-2-5-2" data-name="player album block">
+<div class="vinyl relative flex size-[86px] shrink-0 items-center justify-center rounded-full" data-kid="1-3-2-5-2-1" data-name="vinyl record graphic">
+<img alt="Afterglow record label, amber glass photograph — 金西 卢 on Unsplash" class="size-[38px] rounded-full object-cover" data-kid="1-3-2-5-2-1-1" data-name="vinyl record label image" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1683799286400-69220fa89f48?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"/>
+<span class="absolute top-1/2 left-1/2 size-1.5 -translate-1/2 rounded-full border border-[#dabd75] bg-[#111014]" data-kid="1-3-2-5-2-1-2" data-name="vinyl spindle hole dot"></span>
+<span class="pointer-events-none absolute inset-0 rounded-full bg-[conic-gradient(from_20deg,transparent_15%,#ffffff15_24%,transparent_35%,transparent_65%,#ffffff10_74%,transparent_85%)]" data-kid="1-3-2-5-2-1-3" data-name="vinyl sheen effect overlay"></span>
+</div>
+<div data-kid="1-3-2-5-2-2" data-name="player track info block"><h2 class="text-[18px] font-semibold text-[#f0dfae]" data-kid="1-3-2-5-2-2-1" data-name="now playing track title">Afterglow</h2><p class="mt-1.5 text-[13px] text-[#c9c2b2]" data-kid="1-3-2-5-2-2-2" data-name="now playing track genre">Ambient · Amber studies</p><p class="mt-2 text-[13px] text-[#ccc5b7]" data-kid="1-3-2-5-2-2-3" data-name="now playing playback state">Paused</p></div>
+</div>
+<div class="flex shrink-0 items-center gap-3 text-[19px]" data-kid="1-3-2-5-3" data-name="player playback controls group">
+<button aria-label="Shuffle off" class="flex size-7 items-center justify-center text-[#aaa59a]" data-kid="1-3-2-5-3-1" data-name="shuffle toggle button" type="button"><i class="icon-shuffle" data-kid="1-3-2-5-3-1-1" data-name="shuffle icon"></i></button>
+<button aria-label="Previous track" class="flex size-7 items-center justify-center" data-kid="1-3-2-5-3-2" data-name="previous track button" type="button"><i class="icon-skip-back" data-kid="1-3-2-5-3-2-1" data-name="skip back icon"></i></button>
+<button aria-label="Play Afterglow" class="flex size-12 items-center justify-center rounded-full bg-[#e1cc91] text-[21px] text-[#1d190f]" data-kid="1-3-2-5-3-3" data-name="main play/pause button" type="button"><i class="icon-play ml-0.5" data-kid="1-3-2-5-3-3-1" data-name="play triangle icon"></i></button>
+<button aria-label="Next track" class="flex size-7 items-center justify-center" data-kid="1-3-2-5-3-4" data-name="next track button" type="button"><i class="icon-skip-forward" data-kid="1-3-2-5-3-4-1" data-name="skip forward icon"></i></button>
+<button aria-label="Repeat off" class="flex size-7 items-center justify-center text-[#aaa59a]" data-kid="1-3-2-5-3-5" data-name="repeat toggle button" type="button"><i class="icon-repeat" data-kid="1-3-2-5-3-5-1" data-name="repeat icon"></i></button>
+</div>
+<div class="min-w-[170px] flex-1 px-1" data-kid="1-3-2-5-4" data-name="player progress section">
+<svg aria-label="Audio waveform, paused at 1 minute 42 seconds of 4 minutes 32 seconds" class="h-[39px] w-full" data-kid="1-3-2-5-4-1" data-name="audio waveform visualization" preserveaspectratio="none" role="img" viewbox="0 0 320 42">
+<defs><path d="M2 18v6 M7 14v14 M12 10v22 M17 15v12 M22 6v30 M27 2v38 M32 9v24 M37 14v14 M42 7v28 M47 12v18 M52 16v10 M57 8v26 M62 4v34 M67 11v20 M72 15v12 M77 7v28 M82 12v18 M87 3v36 M92 6v30 M97 13v16 M102 9v24 M107 15v12 M112 17v8 M117 12v18 M122 8v26 M127 5v32 M132 10v22 M137 16v10 M142 13v16 M147 7v28 M152 11v20 M157 15v12 M162 3v36 M167 6v30 M172 12v18 M177 16v10 M182 9v24 M187 5v32 M192 12v18 M197 15v12 M202 8v26 M207 3v36 M212 10v22 M217 14v14 M222 7v28 M227 12v18 M232 17v8 M237 11v20 M242 6v30 M247 9v24 M252 15v12 M257 12v18 M262 4v34 M267 8v26 M272 14v14 M277 10v22 M282 6v30 M287 12v18 M292 15v12 M297 9v24 M302 14v14 M307 17v8 M312 15v12 M317 18v6" id="audio-wave"></path><clippath id="played-wave"><rect height="42" width="120"></rect></clippath></defs>
+<use href="#audio-wave" stroke="#777164" stroke-linecap="round" stroke-width="2.5"></use>
+<use clip-path="url(#played-wave)" href="#audio-wave" stroke="#ddc57e" stroke-linecap="round" stroke-width="2.5"></use>
+</svg>
+<label class="sr-only" data-kid="1-3-2-5-4-2" data-name="seek bar accessible label" for="seek">Seek position</label><input aria-valuetext="1 minute 42 seconds of 4 minutes 32 seconds" class="mt-1 block w-full" data-kid="1-3-2-5-4-3" data-name="seek position slider" id="seek" max="272" min="0" type="range" value="102"/>
+<div class="mt-2 flex justify-between text-[13px] font-semibold tabular-nums text-[#e0d7c2]" data-kid="1-3-2-5-4-4" data-name="progress time display"><span data-kid="1-3-2-5-4-4-1" data-name="elapsed time value">1:42</span><span data-kid="1-3-2-5-4-4-2" data-name="total duration value">4:32</span></div>
+</div>
+<div class="flex w-[115px] shrink-0 items-center gap-3 pl-2 text-[20px]" data-kid="1-3-2-5-5" data-name="player volume control group"><i aria-hidden="true" class="icon-volume-2" data-kid="1-3-2-5-5-1" data-name="volume icon"></i><label class="sr-only" data-kid="1-3-2-5-5-2" data-name="volume accessible label" for="volume">Volume</label><input aria-valuetext="65 percent" class="w-[70px]" data-kid="1-3-2-5-5-3" data-name="volume slider" id="volume" max="100" min="0" type="range" value="65"/></div>
+<button aria-label="Open music queue" class="flex size-8 shrink-0 items-center justify-center text-[21px] text-[#cfc7b6]" data-kid="1-3-2-5-6" data-name="open music queue button" type="button"><i class="icon-list-music" data-kid="1-3-2-5-6-1" data-name="music list icon"></i></button>
+</section>
+</main>
+</div>
+</div></div>
+</body></html>

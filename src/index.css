@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --obsidian: #040407;
+    --ivory: #f5f3ea;
+    --gold: #d4af37;
+    --gold-glow: rgba(212, 175, 55, 0.35);
+    --crimson: #ff0033;
+    --indigo: #4f46e5;
+    --cyan: #06b6d4;
+    --accent: #d4af37;
+    --accent-glow: rgba(212, 175, 55, 0.4);
+    --accent-subtle: rgba(212, 175, 55, 0.12);
+  }
+
+  [data-theme="crimson"] {
+    --accent: #ff0033;
+    --accent-glow: rgba(255, 0, 51, 0.45);
+    --accent-subtle: rgba(255, 0, 51, 0.12);
+  }
+
+  [data-theme="gold"] {
+    --accent: #d4af37;
+    --accent-glow: rgba(212, 175, 55, 0.45);
+    --accent-subtle: rgba(212, 175, 55, 0.12);
+  }
+
+  [data-theme="violet"] {
+    --accent: #8b5cf6;
+    --accent-glow: rgba(139, 92, 246, 0.45);
+    --accent-subtle: rgba(139, 92, 246, 0.12);
+  }
+
+  [data-theme="emerald"] {
+    --accent: #10b981;
+    --accent-glow: rgba(16, 185, 129, 0.45);
+    --accent-subtle: rgba(16, 185, 129, 0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--obsidian);
+    color: var(--ivory);
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Typography Utility */
+.font-display {
+  font-family: 'Cormorant', Georgia, serif;
+}
+
+.font-sans-modern {
+  font-family: 'Plus Jakarta Sans', 'Raleway', sans-serif;
+}
+
+/* 3D Liquid Glassmorphism Core Materiality */
+.liquid-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.018) 100%);
+  backdrop-filter: blur(32px) saturate(210%);
+  -webkit-backdrop-filter: blur(32px) saturate(210%);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+    0 16px 36px -12px rgba(0, 0, 0, 0.6),
+    0 0 24px 0 rgba(0, 0, 0, 0.3);
+}
+
+.liquid-glass-elevated {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.025) 100%);
+  backdrop-filter: blur(40px) saturate(220%);
+  -webkit-backdrop-filter: blur(40px) saturate(220%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.32),
+    0 24px 48px -12px rgba(0, 0, 0, 0.75),
+    0 0 32px 0 var(--accent-subtle);
+}
+
+.liquid-glass-accent {
+  background: linear-gradient(135deg, var(--accent-subtle) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
+    0 10px 25px -5px var(--accent-subtle);
+}
+
+.aperture-card {
+  border-radius: 28px;
+  border: 1px solid rgba(245, 230, 185, 0.22);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Vinyl Turntable Disc */
+.vinyl-disc {
+  background: repeating-radial-gradient(
+    circle at center,
+    #121215 0px,
+    #121215 1px,
+    #222226 1.5px,
+    #0c0c0e 2.5px,
+    #17171a 3px
+  );
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.85);
+}
+
+.spinning-vinyl {
+  animation: spinVinyl 16s linear infinite;
+}
+
+.paused-vinyl {
+  animation-play-state: paused !important;
+}
+
+@keyframes spinVinyl {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Ken Burns Hero Effect */
+.ken-burns {
+  animation: kenBurnsZoom 28s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurnsZoom {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.08) translate(-1%, -1%); }
+  100% { transform: scale(1.04) translate(1%, 0.5%); }
+}
+
+/* Aurora Floating Orbs */
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, -40px) scale(1.1); }
+  66% { transform: translate(-30px, 50px) scale(0.95); }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-70px, 60px) scale(1.15); }
+  66% { transform: translate(40px, -50px) scale(0.9); }
+}
+
+@keyframes floatOrb3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(50px, 70px) scale(1.05); }
+  66% { transform: translate(-60px, -30px) scale(0.92); }
+}
+
+@keyframes floatOrb4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, -60px) scale(1.12); }
+  66% { transform: translate(70px, 30px) scale(0.96); }
+}
+
+.animate-orb-1 { animation: floatOrb1 22s ease-in-out infinite; }
+.animate-orb-2 { animation: floatOrb2 26s ease-in-out infinite; }
+.animate-orb-3 { animation: floatOrb3 20s ease-in-out infinite; }
+.animate-orb-4 { animation: floatOrb4 24s ease-in-out infinite; }
+
+/* Vault PIN Shake */
+.animate-shake {
+  animation: vaultShake 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes vaultShake {
+  10%, 90% { transform: translate3d(-3px, 0, 0); }
+  20%, 80% { transform: translate3d(5px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+  40%, 60% { transform: translate3d(6px, 0, 0); }
+}
+
+/* Custom Scrollbar for Smooth UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(4, 4, 7, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.4);
+}
+
+/* Hide scrollbar for clean snap shorts */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 3D Perspective Grid */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.15);
+  height: 4px;
+  border-radius: 999px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+}
